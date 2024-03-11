@@ -3,14 +3,14 @@ import { extendTheme } from "native-base";
 export const theme = extendTheme({
     config: {
         useSystemColorMode: false,
-        initialColorMode: 'Light',
+        initialColorMode: 'light',
     },
     colors: {
         light: {
             body: '#F5F5F5'
         },
         dark: {
-            body: 'blueGray.800'
+            body: 'rgb(18, 18, 18)'
         },
     },
     shadows: {

@@ -1,11 +1,20 @@
 import { Text } from "native-base";
+import BodyColorMode from "../../components/BodyColorMode";
+import Header from "../../components/Header";
+import ColorModeButton from "../../components/ColorModeButton";
 
-export default function Dashboard() {
+type Props = {
+    navigation: any
+}
+
+export default function Dashboard({ navigation }: Props) {
     return (
-        <>
-            <Text>
-                Hello World!
+        <BodyColorMode>
+            <Header navigation={navigation} />
+            <Text textAlign="center">
+                Dashboard
             </Text>
-        </>
+            <ColorModeButton />
+        </BodyColorMode>
     );
 }
