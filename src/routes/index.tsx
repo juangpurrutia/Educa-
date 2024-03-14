@@ -1,10 +1,15 @@
 import React from 'react';
-import { NavigationContainer } from "@react-navigation/native"
+import { DarkTheme, DefaultTheme, NavigationContainer } from "@react-navigation/native"
 import DrawerRoutes from './drawer.routes';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import SignIn from '../pages/Entities/Credentials/SigIn';
-import { theme } from '../style/theme';
 import { useColorMode } from 'native-base';
+import Dashboard from '../pages/Dashboard';
+
+export type StackParamList = {
+    SignIn: undefined;
+    Dashboard: undefined;
+};
 
 export default function Routes() {
 
@@ -12,9 +17,11 @@ export default function Routes() {
     const { colorMode } = useColorMode();
 
     return (
-        <NavigationContainer>
-            <Drawer.Navigator drawerContent={DrawerRoutes} screenOptions={{ drawerActiveBackgroundColor: colorMode === "light" ? theme.colors.light.body : theme.colors.dark.body }}>
-                <Drawer.Screen name="OtherScreen" component={SignIn} options={{ headerShown: false }} />
+        <NavigationContainer theme={colorMode === 'light' ? DefaultTheme : DarkTheme}>
+            <Drawer.Navigator drawerContent={DrawerRoutes} >
+                <Drawer.Screen name="SignIn" component={SignIn} options={{ headerShown: false }} />
+                <Drawer.Screen name="Central" component={Dashboard} options={{ headerShown: false }} />
+                <Drawer.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }} />
             </Drawer.Navigator>
         </NavigationContainer>
     );
