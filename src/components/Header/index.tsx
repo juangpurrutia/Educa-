@@ -18,10 +18,10 @@ export default function Header({ navigation }: HeaderProps) {
                         <>
                             <Flex backgroundColor="white" shadow="9">
                                 <StatusBar animated={true} barStyle="dark-content" showHideTransition="fade" />
-                                <HStack justifyContent="start" marginTop="20" marginLeft="4" space={5}>
+                                <HStack justifyContent="start" marginTop="20" marginLeft="4" space={2}>
                                     <AntDesign name="bars" size={50} color="black" onPress={() => navigation.toggleDrawer()} />
                                     <HStack space={2} marginLeft="2">
-                                        <Image source={require("../../../assets/ideia_logo_lampada_2.png")} alt="LogoLamp" resizeMode="contain" width={60} height={60} />
+                                        <Image marginBottom={3} source={require("../../../assets/ideia_logo_lampada_2.png")} alt="LogoLamp" resizeMode="contain" width={50} height={50} />
                                         <Text bold fontSize="2xl" color="black" marginY="auto">
                                             Gestão de Ideias
                                         </Text>
@@ -33,12 +33,12 @@ export default function Header({ navigation }: HeaderProps) {
                     )
                     : (
                         <>
-                            <Flex backgroundColor="black" shadow={10}>
+                            <Flex backgroundColor="black" shadow="9">
                                 <StatusBar animated={true} barStyle="light-content" showHideTransition="fade" />
-                                <HStack justifyContent="start" marginTop="20" marginLeft="4" space={5}>
+                                <HStack justifyContent="start" marginTop="20" marginLeft="4" space={2}>
                                     <AntDesign name="bars" size={50} color="white" onPress={() => navigation.toggleDrawer()} />
                                     <HStack space={2} marginLeft="2">
-                                        <Image source={require("../../../assets/ideia_logo_lampada_2.png")} alt="LogoLamp" resizeMode="contain" width={60} height={60} />
+                                        <Image marginBottom={3} source={require("../../../assets/ideia_logo_lampada_2.png")} alt="LogoLamp" resizeMode="contain" width={50} height={50} />
                                         <Text bold fontSize="2xl" color="white" marginY="auto">
                                             Gestão de Ideias
                                         </Text>
