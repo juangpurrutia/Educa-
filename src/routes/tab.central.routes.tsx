@@ -8,7 +8,7 @@ import { CompositeNavigationProp, useNavigation } from '@react-navigation/native
 
 type TabParamList = {
     Dashboard: undefined;
-    SignIn: undefined;
+    Central: undefined;
 };
 
 type ProfileScreenNavigationDashboardProp = CompositeNavigationProp<
@@ -17,7 +17,7 @@ type ProfileScreenNavigationDashboardProp = CompositeNavigationProp<
 >;
 
 type ProfileScreenNavigationSignInProp = CompositeNavigationProp<
-    BottomTabNavigationProp<TabParamList, 'SignIn'>,
+    BottomTabNavigationProp<TabParamList, 'Central'>,
     StackNavigationProp<StackParamList>
 >;
 
@@ -39,10 +39,10 @@ export default function TabCentral({ setCurrentRoute, currentRoute }: PropsTabCe
                 <Text style={{ fontWeight: 'bold' }} fontSize="24">Central</Text>
             </HStack>
             <TouchableOpacity onPress={() => {
-                navigationSignIn.navigate('SignIn');
-                setCurrentRoute("SignIn");
+                navigationSignIn.navigate('Central');
+                setCurrentRoute("Central");
             }}>
-                <Text marginLeft="40px" fontSize="16" color={currentRoute === "SignIn" ? "blue.400" : undefined}>Central</Text>
+                <Text marginLeft="40px" fontSize="16" color={currentRoute === "Central" ? "blue.400" : undefined}>Central</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => {
                 navigationDashboard.navigate('Dashboard');

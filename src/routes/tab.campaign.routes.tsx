@@ -7,11 +7,11 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { StackParamList } from '.';
 
 type TabParamList = {
-    Dashboard: undefined;
+    Campaign: undefined;
 };
 
 type ProfileScreenNavigationProp = CompositeNavigationProp<
-    BottomTabNavigationProp<TabParamList, 'Dashboard'>,
+    BottomTabNavigationProp<TabParamList, 'Campaign'>,
     StackNavigationProp<StackParamList>
 >;
 
@@ -31,10 +31,10 @@ export default function TabCampaign({ setCurrentRoute, currentRoute }: PropsTabC
                 <Text style={{ fontWeight: 'bold' }} fontSize="24">Cadastro</Text>
             </HStack>
             <TouchableOpacity onPress={() => {
-                navigation.navigate('Dashboard');
-                setCurrentRoute("Dashboard");
+                navigation.navigate('Campaign');
+                setCurrentRoute("Campaign");
             }}>
-                <Text marginLeft="40px" fontSize="16" color={currentRoute === "Dashboard" ? "blue.400" : undefined}>Campanhas</Text>
+                <Text marginLeft="40px" fontSize="16" color={currentRoute === "Campaign" ? "blue.400" : undefined}>Campanhas</Text>
             </TouchableOpacity>
         </View>
     );

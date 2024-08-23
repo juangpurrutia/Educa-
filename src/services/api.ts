@@ -1,13 +1,34 @@
+// import axios from 'axios';
+// import config from '../config/config';
+
+// export const getData = async () => {
+//   try {
+//     const response = await axios.get(`${config.apiUrl}/v1/`);
+//     console.log('Dados recebidos:', response.data);
+//   } catch (error) {
+//     console.error('Erro ao carregar dados do dashboard:', error);
+//   }
+// };
+
 import axios from 'axios';
+import config from '../config/config';
 
-
+// Criando uma instância personalizada do Axios
 const api = axios.create({
-  baseURL: 'https://zansap10:5002/api/v2',
-  // arrumar:
-  headers: {
-    api_key: "{Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cG9ydGUudGlAemFuYWZsZXguY29tLmJyIiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJ1bmlxdWVfbmFtZSI6IjE3OSIsIm5iZiI6MTcxMDE5NTMyNSwiZXhwIjoxNzEwMjE2OTI1LCJpYXQiOjE3MTAxOTUzMjV9.wEzZIBy2EUn9Tnjm3vzugOBgxzzAdAgZfwDRmEXj6Aw",
-    'Cache-Control': 'no-cache', 'max-age': 30 
-  }
+  baseURL: config.apiUrl, // URL base da API
+  timeout: 5000, // Define um tempo limite para as requisições (opcional)
 });
+
+// Interceptador para lidar com erros de rede
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.code === 'ERR_NETWORK') {
+      console.error('Erro de rede detectado:', error.message);
+      // Adicione qualquer lógica adicional para lidar com erros de rede aqui
+    }
+    return Promise.reject(error);
+  }
+);
 
 export default api;

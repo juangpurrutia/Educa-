@@ -7,10 +7,10 @@ export const theme = extendTheme({
     },
     colors: {
         light: {
-            body: '#F5F5F5'
+            body: '#FFFFFF'
         },
         dark: {
-            body: 'rgb(18, 18, 18)'
+            body: 'black'
         },
     },
     shadows: {
