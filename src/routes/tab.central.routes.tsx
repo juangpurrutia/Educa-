@@ -50,6 +50,12 @@ export default function TabCentral({ setCurrentRoute, currentRoute }: PropsTabCe
             }}>
                 <Text marginLeft="40px" fontSize="16" color={currentRoute === "Dashboard" ? "blue.400" : undefined}>Dashboard</Text>
             </TouchableOpacity>
+            <TouchableOpacity onPress={() => {
+                navigationDashboard.navigate('Dashboard');
+                setCurrentRoute("Dashboard");
+            }}>
+                <Text marginLeft="40px" fontSize="16" color={currentRoute === "Search" ? "blue.400" : undefined}>Pesquisa</Text>
+            </TouchableOpacity>
         </View>
     );
 }

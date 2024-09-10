@@ -20,7 +20,7 @@ interface DashboardData {
   
 
 const Dashboard = ({ navigation }: Props) => {
-  const [ideiasCount, setIdeiasCount] = useState<number>(0);
+  const [cursosCount, setCursossCount] = useState<number>(0);
   const [pontosCount, setPontosCount] = useState<number>(0);
   const [aprovadasCount, setAprovadasCount] = useState<number>(0);
   const [medalhasOuroCount, setMedalhasOuroCount] = useState<number>(0);
@@ -41,14 +41,10 @@ const Dashboard = ({ navigation }: Props) => {
           <Text style={{ fontWeight: 'bold', fontSize: 20 }}>Dashboard</Text>
           <View style={{ height: 1, backgroundColor: '#fcc42c', marginTop: 10 }} />
         </View>
-        <View style={{ paddingHorizontal: 20, paddingTop: 20 }}>
-          <Text style={{ fontWeight: 'bold', fontSize: 20 }}>Adminatrador TI</Text>
-          <Text style={{ fontSize: 15 }}>Administrador do Sistema</Text>
-        </View>
         <View style={{ paddingHorizontal: 20, paddingTop: 80, flexDirection: 'row', justifyContent: 'space-between' }}>
           <View style={{ alignItems: 'center' }}>
-            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>{ideiasCount}</Text>
-            <Text style={{ fontSize: 15 }}>Ideias</Text>
+            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>{cursosCount}</Text>
+            <Text style={{ fontSize: 15 }}>Cursos</Text>
           </View>
           <View style={{ alignItems: 'center' }}>
             <Text style={{ fontWeight: 'bold', fontSize: 15 }}>{pontosCount}</Text>
@@ -84,13 +80,9 @@ const Dashboard = ({ navigation }: Props) => {
           <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>Dashboard</Text>
           <View style={{ height: 1, backgroundColor: '#fcc42c', marginTop: 10 }} />
         </View>
-        <View style={{ paddingHorizontal: 20, paddingTop: 20 }}>
-          <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>Adminatrador TI</Text>
-          <Text style={{ fontSize: 15, color: 'white' }}>Administrador do Sistema</Text>
-        </View>
         <View style={{ paddingHorizontal: 20, paddingTop: 80, flexDirection: 'row', justifyContent: 'space-between' }}>
           <View style={{ alignItems: 'center' }}>
-            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>{ideiasCount}</Text>
+            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>{cursosCount}</Text>
             <Text style={{ fontSize: 15, color: 'white' }}>Ideias</Text>
           </View>
           <View style={{ alignItems: 'center' }}>

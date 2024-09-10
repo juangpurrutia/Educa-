@@ -13,35 +13,6 @@ type Props = {
 export default function SignIn({ navigation }: Props) {
 
     const { colorMode } = useColorMode();
-    const [matricula, setMatricula] = useState<string>('');
-
-    const { mutate: login, status } = useLogin();  
-
-    const isLoading = status === "pending"; 
-
-    const handleLogin = () => {
-        if (!matricula) {
-            Alert.alert("Erro", "Por favor, insira sua matrícula.");
-            return;
-        }
-    
-        console.log("Matricula digitada:", matricula); 
-    
-        login(
-            { matricula },
-            {
-                onSuccess: (data) => {
-                    console.log("Dados de sucesso:", data); 
-                    Alert.alert("Bem-vindo", `Olá, ${data.usuario.nome}!`);
-                },
-                onError: (error) => {
-                    console.error("Erro na requisição:", error.message); 
-                    //console.error("Detalhes do erro:", error.toJSON()); 
-                    Alert.alert("Erro", "Não foi possível conectar ao servidor.");
-                }
-            }
-        );
-    };
 
     return (
         <BodyColorMode>
@@ -57,12 +28,12 @@ export default function SignIn({ navigation }: Props) {
             }}>
                 <View style={{
                     width: '80%',
-                    backgroundColor: '#fcc42c',
+                    backgroundColor: '#FB2D2D',
                     alignItems: 'center',
                     paddingVertical: 30,
                 }}>
                     <Image
-                        source={require('../../../../../assets/ideia_logo.png')}
+                        source={require('../../../../../assets/ideia_logo1.png')}
                         alt="Logo"
                         style={{
                             width: 150,
@@ -75,11 +46,20 @@ export default function SignIn({ navigation }: Props) {
                     backgroundColor: '#eeece6',
                     alignItems: 'center',
                     paddingVertical: 30,
+                    padding: 10
                 }}>
                     <Input
                         placeholder="Matrícula"
-                        value={matricula}
-                        onChangeText={setMatricula}
+                        marginBottom={5}
+                        style={{
+                            backgroundColor: '#eeece6',
+                            width: '70%',
+                            padding: 10,
+                            marginTop: 20,
+                        }}
+                    />
+                    <Input
+                        placeholder="Senha"
                         style={{
                             backgroundColor: '#eeece6',
                             width: '70%',
@@ -88,10 +68,8 @@ export default function SignIn({ navigation }: Props) {
                         }}
                     />
                     <Button
-                        onPress={handleLogin}
-                        isLoading={isLoading} // Use 'isLoading' aqui
                         style={{
-                            backgroundColor: '#fcc42c',
+                            backgroundColor: '#FB2D2D',
                             marginTop: 20,
                             padding: 10,
                             width: '70%',
@@ -102,7 +80,7 @@ export default function SignIn({ navigation }: Props) {
                     <Text style={{
                             marginTop: 20,
                         }}>
-                        Entre como anônimo: Matrícula = 10
+                        Crie sua Conta
                     </Text>
                 </View>
             </View>
@@ -116,12 +94,12 @@ export default function SignIn({ navigation }: Props) {
             }}>
                 <View style={{
                     width: '80%',
-                    backgroundColor: '#fcc42c',
+                    backgroundColor: '#FB2D2D',
                     alignItems: 'center',
                     paddingVertical: 30,
                 }}>
                     <Image
-                        source={require('../../../../../assets/ideia_logo.png')}
+                        source={require('../../../../../assets/ideia_logo1.png')}
                         alt="Logo"
                         style={{
                             width: 150,
@@ -134,12 +112,22 @@ export default function SignIn({ navigation }: Props) {
                     backgroundColor: '#292929',
                     alignItems: 'center',
                     paddingVertical: 30,
+                    padding: 10
                 }}>
                     <Input
                         placeholder="Matrícula"
                         placeholderTextColor="#d6d6d6"
-                        value={matricula}
-                        onChangeText={setMatricula}
+                        marginBottom={5}
+                        style={{
+                            backgroundColor: '#292929',
+                            width: '70%',
+                            padding: 10,
+                            marginTop: 20,
+                        }}
+                    />
+                    <Input
+                        placeholder="Senha"
+                        placeholderTextColor="#d6d6d6"
                         style={{
                             backgroundColor: '#292929',
                             width: '70%',
@@ -148,10 +136,8 @@ export default function SignIn({ navigation }: Props) {
                         }}
                     />
                     <Button
-                        onPress={handleLogin}
-                        isLoading={isLoading} // Use 'isLoading' aqui
                         style={{
-                            backgroundColor: '#fcc42c',
+                            backgroundColor: '#FB2D2D',
                             marginTop: 20,
                             padding: 10,
                             width: '70%',

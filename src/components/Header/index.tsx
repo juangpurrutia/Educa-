@@ -18,17 +18,17 @@ export default function Header({ navigation }: HeaderProps) {
                     <>
                         <Flex backgroundColor="#e8e8e8" shadow="9">
                             <StatusBar animated={true} barStyle="dark-content" showHideTransition="fade" backgroundColor="white" />
-                            <HStack justifyContent="start" marginTop="29" marginLeft="4" space={2}>
+                            <HStack justifyContent="space-between" marginTop="20" marginLeft="4" marginRight="4" space={2}>
                                 <AntDesign name="bars" size={50} color="black" onPress={() => navigation.toggleDrawer()} />
-                                <HStack space={2} marginLeft="0">
-                                    <Image marginBottom={3} source={require("../../../assets/ideia_logo_lampada_2.png")} alt="LogoLamp" resizeMode="contain" width={50} height={50} />
+                                <HStack space={2}>
+                                    <Image marginBottom={3} source={require("../../../assets/ideia_logo_lampada_1.png")} alt="LogoLamp" resizeMode="contain" width={50} height={50} />
                                     <Text bold fontSize="2xl" color="black" marginY="auto">
-                                        Gestão de Ideias
+                                        Educa+
                                     </Text>
-                                    <AntDesign name="poweroff" size={30} color="black" marginTop={15} marginLeft={15} onPress={() => {
+                                </HStack>
+                                <AntDesign name="poweroff" size={30} color="black" marginTop={15} onPress={() => {
                                         navigation.navigate('SignIn'); 
                                     }} />
-                                </HStack>
                             </HStack>
                         </Flex>
                     </>
@@ -38,17 +38,17 @@ export default function Header({ navigation }: HeaderProps) {
                     <>
                         <Flex backgroundColor="#292929" shadow="9">
                             <StatusBar animated={true} barStyle="light-content" showHideTransition="fade" backgroundColor="black" />
-                            <HStack justifyContent="start" marginTop="29" marginLeft="4" space={2}>
+                            <HStack justifyContent="space-between" marginTop="20" marginLeft="4" marginRight="4" space={2}>
                                 <AntDesign name="bars" size={50} color="white" onPress={() => navigation.toggleDrawer()} />
-                                <HStack space={2} marginLeft="0">
-                                    <Image marginBottom={3} source={require("../../../assets/ideia_logo_lampada_2.png")} alt="LogoLamp" resizeMode="contain" width={50} height={50} />
+                                <HStack space={2}>
+                                    <Image marginBottom={3} source={require("../../../assets/ideia_logo_lampada_1.png")} alt="LogoLamp" resizeMode="contain" width={50} height={50} />
                                     <Text bold fontSize="2xl" color="white" marginY="auto">
-                                        Gestão de Ideias
+                                        Educa+
                                     </Text>
-                                    <AntDesign name="poweroff" size={30} color="white" marginTop={15} marginLeft={15} onPress={() => {
+                                </HStack>
+                                <AntDesign name="poweroff" size={30} color="white" marginTop={15} marginLeft={70} onPress={() => {
                                         navigation.navigate('SignIn'); 
                                     }} />
-                                </HStack>
                             </HStack>
                         </Flex>
                     </>

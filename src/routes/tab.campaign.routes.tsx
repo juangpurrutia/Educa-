@@ -34,7 +34,7 @@ export default function TabCampaign({ setCurrentRoute, currentRoute }: PropsTabC
                 navigation.navigate('Campaign');
                 setCurrentRoute("Campaign");
             }}>
-                <Text marginLeft="40px" fontSize="16" color={currentRoute === "Campaign" ? "blue.400" : undefined}>Campanhas</Text>
+                <Text marginLeft="40px" fontSize="16" color={currentRoute === "Campaign" ? "blue.400" : undefined}>Cursos</Text>
             </TouchableOpacity>
         </View>
     );

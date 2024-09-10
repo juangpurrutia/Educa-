@@ -9,8 +9,8 @@ export default function DrawerRoutes() {
 
     return (
         <DrawerContentScrollView >
-            <Flex backgroundColor="yellow.400" align="center">
-                <Image source={require("../../assets/Logo-cinza-sem-funco.png")} alt="LogoLamp" resizeMode="contain" width={200} height={60} />
+            <Flex backgroundColor="#FB2D2D" align="center">
+                <Image source={require("../../assets/ideia_logo1.png")} alt="LogoLamp" resizeMode="contain" width={200} height={60} />
             </Flex>
             <TabCampaign setCurrentRoute={setCurrentRoute} currentRoute={currentRoute} />
             <TabCentral setCurrentRoute={setCurrentRoute} currentRoute={currentRoute} />

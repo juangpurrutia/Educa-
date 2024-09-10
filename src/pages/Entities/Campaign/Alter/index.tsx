@@ -40,7 +40,7 @@ export default function CampaignAlter({ navigation }: Props) {
                     </View>
 
                     {/* Imagem */}
-                    <Image source={require('../../../../../assets/ideia_logo_lampada_2.png')} style={{ width: '100%', height: 100, marginTop: 20 }} alt="Logo" resizeMode="contain" />
+                    <Image source={require('../../../../../assets/ideia_logo_lampada_1.png')} style={{ width: '100%', height: 100, marginTop: 20 }} alt="Logo" resizeMode="contain" />
 
                     {/* Campos de Input */}
                     <View style={{ width: '80%', marginTop: 20 }}>
@@ -77,10 +77,10 @@ export default function CampaignAlter({ navigation }: Props) {
 
                     {/* Botões Salvar e Cancelar */}
                     <View style={{ width: '80%', marginBottom: 20, marginTop: 20 }}>
-                        <TouchableOpacity style={{ backgroundColor: '#fcc42c', padding: 15, borderRadius: 5, marginBottom: 10, alignItems: 'center' }}>
+                        <TouchableOpacity style={{ backgroundColor: '#FB2D2D', padding: 15, borderRadius: 5, marginBottom: 10, alignItems: 'center' }}>
                             <Text style={{ color: 'black', fontWeight: 'bold' }}>Salvar</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{ backgroundColor: '#fcc42c', padding: 15, borderRadius: 5, alignItems: 'center' }}>
+                        <TouchableOpacity style={{ backgroundColor: '#FB2D2D', padding: 15, borderRadius: 5, alignItems: 'center' }}>
                             <Text style={{ color: 'black', fontWeight: 'bold' }}>Cancelar</Text>
                         </TouchableOpacity>
                     </View>
@@ -107,7 +107,7 @@ export default function CampaignAlter({ navigation }: Props) {
                     </View>
 
                     {/* Imagem */}
-                    <Image source={require('../../../../../assets/ideia_logo_lampada_2.png')} style={{ width: '100%', height: 100, marginTop: 20 }} alt="Logo" resizeMode="contain" />
+                    <Image source={require('../../../../../assets/ideia_logo_lampada_1.png')} style={{ width: '100%', height: 100, marginTop: 20 }} alt="Logo" resizeMode="contain" />
 
                     {/* Campos de Input */}
                     <View style={{ width: '80%', marginTop: 20 }}>
